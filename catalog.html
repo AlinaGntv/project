@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог | Мерка.ру</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Хедер -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">МЕРКА.РУ</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="dashboard.html">Личный кабинет</a></li>
+                    <li><a href="#" id="loginBtn">Войти</a></li>
+                    <li><a href="#" id="registerBtn">Регистрация</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="catalog">
+        <div class="container">
+            <h2>Каталог</h2>
+            <div class="filters">
+                <select>
+                    <option value="all">Все категории</option>
+                    <option value="men">Мужская одежда</option>
+                    <option value="women">Женская одежда</option>
+                </select>
+                <select>
+                    <option value="all">Все размеры</option>
+                    <option value="s">S</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                </select>
+                <select>
+                    <option value="low-high">Цена: по возрастанию</option>
+                    <option value="high-low">Цена: по убыванию</option>
+                </select>
+            </div>
+            <div class="products">
+                <!-- Продукты -->
+                <div class="product-item">
+                    <img src="images/product1.png" alt="Продукт 1">
+                    <h4>Название продукта</h4>
+                    <p>Описание продукта</p>
+                    <p>Цена: 1990 руб.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <p>Мерка.ру © 2024</p>
+            <div class="social-icons">
+                <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
