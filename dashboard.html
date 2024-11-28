@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Личный кабинет | Мерка.ру</title>
     <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -22,22 +23,53 @@
                     <li><a href="catalog.html">Каталог</a></li>
                     <li><a href="contacts.html">Контакты</a></li>
                     <li><a href="dashboard.html">Личный кабинет</a></li>
-                    <li><a href="#" id="loginBtn">Войти</a></li>
-                    <li><a href="#" id="registerBtn">Регистрация</a></li>
+                    <li><a href="#" id="login-btn">Войти</a></li>
+                    <li><a href="#" id="register-btn">Регистрация</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <div id="toast" class="toast"></div>
+
+    <!-- Модальное окно для входа -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вход</h2>
+            <form>
+                <input type="email" placeholder="Введите email" required>
+                <input type="password" placeholder="Введите пароль" required>
+                <button type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно для регистрации -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Регистрация</h2>
+            <form>
+                <input type="email" placeholder="Введите email" required>
+                <input type="password" placeholder="Введите пароль" required>
+                <input type="password" placeholder="Подтвердите пароль" required>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+
     <section class="dashboard">
         <div class="container">
             <h2>Личный кабинет</h2>
-            <p>Добро пожаловать, [Имя пользователя]!</p>
+            <p>Добро пожаловать, <span id="user-email"></span>!</p>
             <h3>Ваши заказы</h3>
             <ul>
                 <li>Заказ №1234 - Статус: В обработке</li>
                 <li>Заказ №1235 - Статус: Доставлен</li>
             </ul>
+            <button id="logout-btn">Выйти</button>
         </div>
     </section>
 
