@@ -355,6 +355,7 @@ footer .social-icons img {
     transform: translateY(0);
 }
 
+
 /* Адаптивные стили */
 @media (max-width: 768px) {
     header .container {

@@ -17,37 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const registerModal = document.getElementById('registerModal');
     const loginBtn = document.getElementById('login-btn');
     const registerBtn = document.getElementById('register-btn');
-    const loginCloseButton = document.getElementById("login-close");
-    const registerCloseButton = document.getElementById("register-close");
     const dashboardLink = document.querySelector('a[href="dashboard.html"]');
-
-        // Открытие модальных окон (примеры для кнопок "Войти" и "Регистрация")
-    document.getElementById("login-btn").onclick = function() {
-        loginModal.style.display = 'flex';
-    }
-
-    document.getElementById("register-btn").onclick = function() {
-        registerModal.style.display = 'flex';
-    }
-
-    // Закрытие модальных окон при нажатии на кнопку закрытия
-    loginCloseButton.onclick = function() {
-        loginModal.style.display = 'none';
-    }
-
-    registerCloseButton.onclick = function() {
-        registerModal.style.display = 'none';
-    }
-
-    // Закрытие модального окна при клике за пределами окна
-    window.onclick = function(event) {
-        if (event.target == loginModal) {
-            loginModal.style.display = 'none';
-        } else if (event.target == registerModal) {
-            registerModal.style.display = 'none';
-        }
-    }
-    
 
     const isLoggedIn = localStorage.getItem('isLoggedIn');
     const userEmail = localStorage.getItem('userEmail');
