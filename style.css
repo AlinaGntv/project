@@ -51,15 +51,17 @@ header nav ul li:last-child {
 }
 
 header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.9em;
-    font-weight: bold;
-    text-transform: uppercase;
+    color: #fff; /* Белый цвет текста */
+    text-decoration: none; /* Убираем стандартное подчёркивание */
+    font-size: 0.9em; /* Размер текста */
+    font-weight: bold; /* Убираем выделение жирным */
+    text-transform: uppercase; /* Заглавные буквы */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #f0f0f0;
+    text-decoration: underline; /* Добавляем подчёркивание при наведении */
+    color: #f0f0f0; /* Светлый оттенок текста */
 }
 
 header nav ul li:nth-child(4) a {
@@ -74,6 +76,39 @@ header nav ul li:nth-child(5), header nav ul li:nth-child(6) {
 header nav ul li:nth-child(5) a, header nav ul li:nth-child(6) a {
     font-weight: normal;
 }
+
+input {
+    border-radius: 5px; /* Уголок сглаживания */
+    border: 1px solid #ccc; /* Цвет рамки */
+    padding: 10px;
+    font-size: 1em;
+    width: calc(100% - 20px); /* Поле вписывается в ширину */
+    box-sizing: border-box; /* Учитывает padding в ширине */
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    background-color: #4a5058; /* Основной цвет кнопок */
+    color: #fff; /* Белый текст */
+    border: none; /* Убираем рамку */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    font-size: 1em; /* Размер текста */
+    border-radius: 5px; /* Скругленные углы */
+    cursor: pointer; /* Указатель при наведении */
+    text-transform: uppercase; /* Заглавные буквы */
+    font-weight: bold; /* Полужирный текст */
+    transition: background-color 0.3s ease; /* Анимация смены цвета */
+}
+
+button:hover {
+    background-color: #3a3e44; /* Цвет при наведении */
+}
+
 
 .hero {
     background-color: #f8f9fa;
@@ -134,6 +169,40 @@ header nav ul li:nth-child(5) a, header nav ul li:nth-child(6) a {
 .hero-form button:hover {
     background-color: #0056b3;
 }
+
+.nav-btn {
+    color: #fff; /* Белый текст */
+    text-decoration: none; /* Убираем подчёркивание */
+    font-size: 0.9em; /* Приводим размер в соответствие с другими ссылками */
+    font-weight: bold; /* Полужирный текст */
+    text-transform: uppercase; /* Заглавные буквы */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav-btn:hover {
+    text-decoration: underline; /* Подчёркивание при наведении */
+    color: #f0f0f0; /* Светлый оттенок текста */
+}
+
+.login-btn, .register-btn {
+    font-size: 1.1em; /* Размер текста */
+    font-weight: bold; /* Сделать текст жирным */
+    text-decoration: none; /* Убираем подчёркивание */
+    color: #fff; /* Белый текст */
+    text-transform: uppercase; /* Заглавные буквы для согласованности */
+    background-color: #4a5058; /* Цвет кнопки */
+    padding: 10px 15px; /* Поля */
+    border-radius: 5px; /* Скругленные углы */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Анимация */
+    margin-right: -50px; /* Уменьшаем расстояние между кнопками */
+}
+
+
+.login-btn:hover, .register-btn:hover {
+    text-decoration: underline; /* Подчёркивание при наведении */
+    color: #f0f0f0; /* Светлый оттенок текста */
+}
+
 
 .steps {
     background-color: #fff;
@@ -293,6 +362,9 @@ footer .social-icons img {
     max-width: 90%;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
+    position: relative;
+    min-width: 300px;
+    min-height: 150px;
 }
 
 .modal-content h2 {
@@ -324,10 +396,29 @@ footer .social-icons img {
 
 .close {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
+    top: 10px; /* Расстояние сверху */
+    right: 10px; /* Расстояние справа */
+    font-size: 18px;
+    color: #333;
     cursor: pointer;
+    z-index: 1;
+}
+.close:hover {
+    color: #007bff;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    background: transparent;
+    border: none;
 }
 
 /* Стили для тостов */

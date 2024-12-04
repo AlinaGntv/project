@@ -15,9 +15,10 @@ function showToast(message) {
 document.addEventListener('DOMContentLoaded', () => {
     const loginModal = document.getElementById('loginModal');
     const registerModal = document.getElementById('registerModal');
-    const loginBtn = document.getElementById('login-btn');
-    const registerBtn = document.getElementById('register-btn');
+    const loginBtn = document.querySelector('.login-btn');
+    const registerBtn = document.querySelector('.register-btn');
     const dashboardLink = document.querySelector('a[href="dashboard.html"]');
+    const modals = document.querySelectorAll('.modal');
 
     const isLoggedIn = localStorage.getItem('isLoggedIn');
     const userEmail = localStorage.getItem('userEmail');
@@ -111,4 +112,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+
+    modals.forEach(modal => {
+        const closeButton = modal.querySelector('.close');
+        if (closeButton) {
+            closeButton.onclick = () => {
+                modal.style.display = 'none';
+            };
+        }
+
+        modal.onclick = (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+    });
+    
 });
