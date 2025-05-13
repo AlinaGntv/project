@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Мерка.ру</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/index.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Хедер -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>МЕРКА.РУ</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Продукция</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="dashboard.html">Личный кабинет</a></li>
+                    <li><a href="#" class="nav-btn login-btn">Войти</a></li>
+                    <li><a href="#" class="nav-btn register-btn">Регистрация</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <!-- Модальное окно для входа -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вход</h2>
+            <form>
+                <input type="email" placeholder="Введите email" required>
+                <input type="password" placeholder="Введите пароль" required>
+                <button type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно для регистрации -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Регистрация</h2>
+            <form>
+                <input type="email" placeholder="Введите email" required>
+                <input type="password" placeholder="Введите пароль" required>
+                <input type="password" placeholder="Подтвердите пароль" required>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+
+    <section class="contacts">
+        <div class="container">
+            <h2>Свяжитесь с нами</h2>
+            <p>Мы всегда рады помочь вам. Свяжитесь с нами удобным для вас способом!</p>
+
+            <div class="contact-details">
+                <!-- Адрес -->
+                <div class="contact-item">
+                    <img src="/assets/images/address-icon.png" alt="Адрес">
+                    <h3>Адрес</h3>
+                    <p>Сергиев Посад, Новоугличское шоссе, 52</p>
+                </div>
+                <!-- Телефон -->
+                <div class="contact-item">
+                    <img src="/assets/images/phone-icon.png" alt="Телефон">
+                    <h3>Телефон</h3>
+                    <p>+7 (495) 123-45-67</p>
+                </div>
+                <!-- Email -->
+                <div class="contact-item">
+                    <img src="/assets/images/email-icon.png" alt="Email">
+                    <h3>Email</h3>
+                    <p>support@merka.ru</p>
+                </div>
+                <!-- Режим работы -->
+                <div class="contact-item">
+                    <img src="/assets/images/clock-icon.png" alt="Часы работы">
+                    <h3>Часы работы</h3>
+                    <p>Пн-Пт: 09:00 - 18:00<br>Сб-Вс: выходной</p>
+                </div>
+            </div>
+
+            <div class="map">
+                <h3>Мы на карте</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.522656635389!2d37.6203933!3d55.75396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab6d2e1b2f7c7%3A0xe6b650c94dbf7220!2z0JrRg9C90LjQt9Cw!5e0!3m2!1sru!2sru!4v1698342823666!5m2!1sru!2sru"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <p>Мерка.ру © 2024</p>
+            <div class="social-icons">
+                <a href="#"><img src="/assets/images/facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="/assets/images/twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="/assets/images/instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

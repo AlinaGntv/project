@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет | Мерка.ру</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/index.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Хедер -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>МЕРКА.РУ</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Продукция</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="dashboard.html">Личный кабинет</a></li>
+                    <li><a href="#" class="nav-btn login-btn">Войти</a></li>
+                    <li><a href="#" class="nav-btn register-btn">Регистрация</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <!-- Модальное окно для входа -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вход</h2>
+            <form>
+                <input type="email" placeholder="Введите email" required>
+                <input type="password" placeholder="Введите пароль" required>
+                <button type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно для регистрации -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Регистрация</h2>
+            <form>
+                <input type="email" placeholder="Введите email" required>
+                <input type="password" placeholder="Введите пароль" required>
+                <input type="password" placeholder="Подтвердите пароль" required>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+
+    <section class="dashboard">
+        <div class="container">
+            <h2>Личный кабинет</h2>
+            <p>Добро пожаловать, <span id="user-email"></span>!</p>
+
+            <section class="clothing-models">
+                <h3>Выберите модель одежды</h3>
+                <div class="model-selector">
+                    <label for="model">Модель:</label>
+                    <select id="modelSelect">
+                        <option value="tshirt">Футболка</option>
+                        <option value="hoodie">Толстовка</option>
+                        <option value="dress">Платье</option>
+                    </select>
+                </div>
+
+                <h4>Настройка модели</h4>
+                <form id="model-settings">
+                    <label for="color">Цвет:</label>
+                    <input type="color" id="color" value="#ffffff">
+
+                    <label for="material">Материал:</label>
+                    <select id="material">
+                        <option value="cotton">Хлопок</option>
+                        <option value="polyester">Полиэстер</option>
+                        <option value="wool">Шерсть</option>
+                    </select>
+
+                    <label for="style">Стиль:</label>
+                    <select id="style">
+                        <option value="casual">Кэжуал</option>
+                        <option value="sport">Спортивный</option>
+                        <option value="formal">Официальный</option>
+                    </select>
+
+                    <button type="submit">Сохранить настройки</button>
+                </form>
+            </section>
+
+            <h3>Ваши размеры</h3>
+            <form id="size-form">
+                <label for="height">Рост (см):</label>
+                <input type="number" id="height" placeholder="Введите ваш рост" required>
+
+                <label for="chest">Обхват груди (см):</label>
+                <input type="number" id="chest" placeholder="Введите обхват груди" required>
+
+                <label for="waist">Обхват талии (см):</label>
+                <input type="number" id="waist" placeholder="Введите обхват талии" required>
+
+                <label for="hips">Обхват бедер (см):</label>
+                <input type="number" id="hips" placeholder="Введите обхват бедер" required>
+
+                <button type="submit">Сохранить размеры</button>
+            </form>
+
+            <h3>Адрес доставки</h3>
+            <form id="address-form">
+                <label for="address">Адрес:</label>
+                <input type="text" id="address" placeholder="Введите ваш адрес" required>
+
+                <label for="city">Город:</label>
+                <input type="text" id="city" placeholder="Введите ваш город" required>
+
+                <label for="postal-code">Почтовый индекс:</label>
+                <input type="text" id="postal-code" placeholder="Введите ваш почтовый индекс" required>
+
+                <button type="submit">Сохранить адрес</button>
+            </form>
+
+            <h4>Сохраненный адрес:</h4>
+            <ul id="address-list">
+                <li>Точный адрес: <span id="saved-address">-</span></li>
+                <li>Город: <span id="saved-city">-</span></li>
+                <li>Почтовый индекс: <span id="saved-postal-code">-</span></li>
+            </ul>
+
+            <h4>Сохраненные размеры:</h4>
+            <ul id="size-list">
+                <li>Рост: <span id="saved-height">-</span> см</li>
+                <li>Обхват груди: <span id="saved-chest">-</span> см</li>
+                <li>Обхват талии: <span id="saved-waist">-</span> см</li>
+                <li>Обхват бедер: <span id="saved-hips">-</span> см</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="order-section">
+        <h3>Оформление заказа</h3>
+        <button id="create-order-btn">Создать заказ</button>
+        <div id="order-status">
+            <h4>Статус заказа:</h4>
+            <p id="order-message">Нет активных заказов.</p>
+        </div>
+    </section>
+
+    <section class="user-messages">
+        <h3>Отправить сообщение администратору</h3>
+        <form id="message-form">
+            <label for="message">Ваше сообщение:</label>
+            <textarea id="message" rows="4" placeholder="Введите сообщение" required></textarea>
+            <button type="submit">Отправить</button>
+            <button id="logout-btn">Выйти</button>
+        </form>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <p>Мерка.ру © 2024</p>
+            <div class="social-icons">
+                <a href="#"><img src="/assets/images/facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="/assets/images/twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="/assets/images/instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+    <div id="toast" class="toast"></div>
+
+
+</body>
+
+</html>

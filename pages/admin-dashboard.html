@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Административная панель</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/index.js" defer></script>
+</head>
+
+<body>
+    <!-- Хедер -->
+    <header class="admin-header">
+        <div class="container">
+            <h1>Административная панель</h1>
+            <button id="logoutButton" class="btn">Выйти</button>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="admin-content">
+        <!-- Заказы -->
+        <section class="admin-orders">
+            <h2>Список заказов</h2>
+            <div id="orders-container" class="data-container">
+                <p>Заказы отсутствуют.</p>
+            </div>
+            <button id="refresh-orders-btn" class="btn">Обновить заказы</button>
+        </section>
+
+        <!-- Мерки пользователей -->
+        <section class="admin-sizes">
+            <h2>Мерки пользователей</h2>
+            <div id="sizes-container" class="data-container">
+                <p>Мерки отсутствуют.</p>
+            </div>
+        </section>
+
+        <!-- Сообщения -->
+        <section class="admin-messages">
+            <h2>Сообщения от пользователей</h2>
+            <div id="messages-container" class="data-container">
+                <p>Сообщения отсутствуют.</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
